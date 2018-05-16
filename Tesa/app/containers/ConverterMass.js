@@ -188,6 +188,7 @@ class Details extends Component {
     +'\n'+this.state.lengthValueInPound+' Pound'
     +'\n'+this.state.lengthValueInOunce+' Ounce'
     +'\n'+this.state.lengthValueInNewton+' Newton';
+
     if(Platform.OS === 'ios') {
       Share.share({
         message: textToShare,
@@ -216,6 +217,7 @@ class Details extends Component {
       .then(this._showResult)
       .catch(err => console.log(err))
     }
+    
   }
 
   render() {

@@ -139,6 +139,7 @@ class Details extends Component {
     + this.state.lengthValueInMM +' MM'
     +'\n'+this.state.lengthValueInMILS+' Mils'
     +'\n'+this.state.lengthValueInμM+' μM';
+
     if(Platform.OS === 'ios') {
       Share.share({
         message: textToShare,
@@ -167,6 +168,7 @@ class Details extends Component {
       .then(this._showResult)
       .catch(err => console.log(err))
     }
+
   }
 
   getCalculatedValue = (number, conv) => {

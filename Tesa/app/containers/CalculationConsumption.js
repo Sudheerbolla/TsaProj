@@ -58,7 +58,7 @@ export default class CalculationConsumptation extends Component {
   }
 
   shareTextWithTitle() {
-    let emailsubject='Tesa Tape Calculator - Consumptation';
+    let emailsubject='Tesa Tape Calculator - Consumption';
 
     let textToShare='Input: \n'+ 'Length: '+this.state.lengthValue+'mm, Width: '+this.state.widthValue+'μm '+
     +'\n'+'\n'
@@ -93,6 +93,7 @@ export default class CalculationConsumptation extends Component {
       .then(this._showResult)
       .catch(err => console.log(err))
     }
+    
   }
 
   validateDecimal = (value) => {

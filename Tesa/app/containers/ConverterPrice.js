@@ -198,6 +198,7 @@ class Details extends Component {
     +'\n'+this.state.lengthValueInPY+' yard2'
     +'\n'+this.state.lengthValueInPF+' feet2'
     +'\n'+this.state.lengthValueInPMSI+' MSI';
+
     if(Platform.OS === 'ios') {
       Share.share({
         message: textToShare,
@@ -226,6 +227,7 @@ class Details extends Component {
       .then(this._showResult)
       .catch(err => console.log(err))
     }
+    
   }
 
   render() {

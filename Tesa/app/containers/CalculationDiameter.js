@@ -51,7 +51,7 @@ export default class CalculationDiameter extends Component {
   }
 
   shareTextWithTitle() {
-    let emailsubject ='Tesa Tape Calculator - Diameter';
+  let emailsubject ='Tesa Tape Calculator - Diameter';
   if(Platform.OS === 'ios') {
     Share.share({
       message: this.state.textToShare,
@@ -80,7 +80,7 @@ export default class CalculationDiameter extends Component {
     .then(this._showResult)
     .catch(err => console.log(err))
   }
-  
+
   }
 
   updateShareText(result){

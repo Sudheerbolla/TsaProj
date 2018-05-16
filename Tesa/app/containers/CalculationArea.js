@@ -179,7 +179,7 @@ export default class CalculationArea extends Component {
       message: textToShare,
       subject: emailsubject
     }, {
-      dialogTitle: emailsubject,
+      subject: emailsubject,
       excludedActivityTypes: [
         'com.apple.UIKit.activity.PostToTwitter',
       ]
@@ -202,7 +202,6 @@ export default class CalculationArea extends Component {
     .then(this._showResult)
     .catch(err => console.log(err))
   }
-
   }
 
   render() {

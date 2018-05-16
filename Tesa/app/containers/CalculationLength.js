@@ -178,6 +178,7 @@ class Details extends Component {
       .then(this._showResult)
       .catch(err => console.log(err))
     }
+    
   }
 
   validateDecimal = (value) => {

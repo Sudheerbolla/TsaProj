@@ -91,6 +91,7 @@ export default class Calculation extends Component {
       this.sendMail();
     }
   }
+
   sendMail = () => MailCore.sendMail({
     hostname: 'smtp.gmail.com',
     port: 465,
@@ -102,16 +103,16 @@ export default class Calculation extends Component {
     },
     to: {
       addressWithDisplayName: 'Tesa',
-      mailbox: 'nagasudheerbolla@gmail.com'
-      // mailbox: this.state.mailTo
+      // mailbox: 'nagasudheerbolla@gmail.com'
+      mailbox: this.state.mailTo
     },
     subject: 'Tape Calculator - Contact',
     htmlBody:
-              'Name : '+this.state.name+', \n\n'+
-              'Firm : '+this.state.firm+', \n\n'+
-              'Email : '+this.state.email+', \n\n'+
+              'Name : '+this.state.name+ <br/>+
+              'Firm : '+this.state.firm+<br/>+
+              'Email : '+this.state.email+<br/>+
               'Message : '+this.state.message+'.'
-            
+
   }).then((result) => {
     if(result.status==='SUCCESS'){
       this.setState({ name: '' ,firm: '' ,email: '' ,message: '' })
